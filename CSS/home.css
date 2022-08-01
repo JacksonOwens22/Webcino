@@ -1,4 +1,32 @@
 body, html {
+        margin: 0;
 	width: 100%;
 	height: 100%;
+        overflow: hidden;
+}
+.container {
+    margin: 2% auto auto 30%;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto auto;
+    max-width: 538px;
+    background-color: #add8e6;
+}
+
+.tile {
+    border: 1px solid black;
+    min-width: 75px;
+    min-height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
+
+.first-number {
+    color: red;
+}
+
+.second-number {
+    color: blue;
 }
