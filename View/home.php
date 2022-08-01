@@ -8,13 +8,24 @@
         <script src="gameBoard.js"></script>
     </head>
     <body>
-		<header>
-		
-		</header>
+        <header></header>
             <main>
-                <div class="container">
+       <div class = "scene">
+           <div class="cube">
+            <div class="cube__face cube__face--1">1</div>
+            <div class="cube__face cube__face--2">2</div>
+            <div class="cube__face cube__face--3">3</div>
+            <div class="cube__face cube__face--4">4</div>
+            <div class="cube__face cube__face--5">5</div>
+            <div class="cube__face cube__face--6">6</div>
+           </div>
+        </div>
+                
+                <div class="container-grid">
                     <div class="row1">
-                        <div class="tile"></div>
+                        <div class="tile">
+                            <button class = "rollBtn">Roll the Dice</button>
+                        </div>
                         <div class="tile">1</div>
                         <div class="tile">2</div>
                         <div class="tile">3</div>  
