@@ -4,16 +4,31 @@ $(document).ready(function() {
 });
 
 var rollTheDice = function() {
-        //$('#rollBtn').attr('disabled', true);
-        var randomNumber1 = Math.floor(Math.random() * 6) + 1;
-        var randomNumber2 = Math.floor(Math.random() * 6) + 1;
-        
         $('#dice1').removeClass('paused');
         $('#dice2').removeClass('paused');
-        rollingAnimation = setInterval(timer, 2200);
-        
-        
-        
+        setInterval(timer1, 2200);
+        setInterval(timer2, 4200);
+        showDice();
+};
+
+var selectNumber = function(randomNumber1, randomNumber2){
+    $('#column' + randomNumber1).css("background-color", "yellow");
+    $('#row' + randomNumber2).css("background-color", "yellow");
+};
+
+function timer1() {
+        $('#dice1').addClass('paused');
+};
+
+function timer2() {
+        $('#dice2').addClass('paused');
+};
+
+var showDice = function() {
+        $('#rollBtn').attr('disabled', true);
+        var randomNumber1 = Math.floor(Math.random() * 6) + 1;
+        var randomNumber2 = Math.floor(Math.random() * 6) + 1;        
+  
         $('#roll1').text(randomNumber1);
         $('#roll2').text(randomNumber2);
                 
@@ -27,13 +42,5 @@ var rollTheDice = function() {
         clearInterval(timer);
 };
 
-var selectNumber = function(randomNumber1, randomNumber2){
-    $('#column' + randomNumber1).css("background-color", "yellow");
-    $('#row' + randomNumber2).css("background-color", "yellow");
-};
-
-function timer() {
-        $('#dice1').addClass('paused');
-        $('#dice2').addClass('paused');
-};
-
+        
+        
