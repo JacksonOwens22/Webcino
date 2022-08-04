@@ -3,28 +3,32 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content= "width=device-width, initial-scale=1.0">
-        <link href="CSS/home.css" rel="stylesheet" type="text/css"/>
-        <title>LandScape</title>
+        <link href="CSS/gameScreen.css" rel="stylesheet" type="text/css"/>
+        <title>Dice</title>
         <script src="https://code.jquery.com/jquery-latest.min.js"></script>
-        <script src="gameBoard.js"></script>
+        <script src="gameBoardLogic.js"></script>
     </head>
     <body>
         <header></header>
             <main>
-                <div class="container">
+                <div class="dice-container">
                     <div class="dice">
 			<img class="img1" src="Photos/dice6.png">
                     </div>
 
                     <div class="dice">
 			<img class="img2" src="Photos/dice6.png">
-		</div>
-        </div>
-                
+                    </div>
+                    <div class="rollOutcome">
+                        <p id="roll1"></p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <p id="roll2"></p>
+                    </div>           
+                </div>
+  
                 <div class="container-grid">
                     <div class="row1">
                         <div class="tile">
-                            <button class="rollBtn">Roll the Dice</button>
+                            <button id="rollBtn" class="rollBtn">Roll the Dice</button>
                         </div>
                         <div class="tile">1</div>
                         <div class="tile">2</div>

@@ -1,17 +1,19 @@
+'use stric';
 $(document).ready(function() {
     $('#rollBtn').click(rollTheDice);
+    
 });
 
-
-function rollTheDice() {
-    setTimeout(function () {
+var rollTheDice = function() {
         var randomNumber1 = Math.floor(Math.random() * 6) + 1;
         var randomNumber2 = Math.floor(Math.random() * 6) + 1;
-
+        
+        $('#roll1').text(randomNumber1);
+        $('#roll2').text(randomNumber2);
+        
         document.querySelector(".img1").setAttribute("src",
-            "dice" + randomNumber1 + ".png");
-
+            "Photos/dice" + randomNumber1 + ".png");
+            
         document.querySelector(".img2").setAttribute("src",
-            "dice" + randomNumber2 + ".png");
-    }, 2500);
-}
+            "Photos/dice" + randomNumber2 + ".png");
+};
