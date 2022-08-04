@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content= "width=device-width, initial-scale=1.0">
         <link href="CSS/home.css" rel="stylesheet" type="text/css"/>
         <title>LandScape</title>
         <script src="https://code.jquery.com/jquery-latest.min.js"></script>
@@ -10,21 +11,20 @@
     <body>
         <header></header>
             <main>
-       <div class = "scene">
-           <div class="cube">
-            <div class="cube__face cube__face--1">1</div>
-            <div class="cube__face cube__face--2">2</div>
-            <div class="cube__face cube__face--3">3</div>
-            <div class="cube__face cube__face--4">4</div>
-            <div class="cube__face cube__face--5">5</div>
-            <div class="cube__face cube__face--6">6</div>
-           </div>
+                <div class="container">
+                    <div class="dice">
+			<img class="img1" src="Photos/dice6.png">
+                    </div>
+
+                    <div class="dice">
+			<img class="img2" src="Photos/dice6.png">
+		</div>
         </div>
                 
                 <div class="container-grid">
                     <div class="row1">
                         <div class="tile">
-                            <button class = "rollBtn">Roll the Dice</button>
+                            <button class="rollBtn">Roll the Dice</button>
                         </div>
                         <div class="tile">1</div>
                         <div class="tile">2</div>
