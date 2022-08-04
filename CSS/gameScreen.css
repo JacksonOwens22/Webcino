@@ -21,7 +21,6 @@ body, html {
 }
 
 .rollOutcome p{
-    
     display: inline;
 }
 
@@ -31,13 +30,23 @@ body, html {
         margin: 10px;
 }
 
-img {
-    width: 100%;
-}
-
 .rollBtn{
   width: 70px;
   height: 70px;
+}
+
+.img1, .img2{
+    animation: rotate 0.75s infinite linear;
+}
+
+.paused {
+    animation-play-state: paused;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(-360deg);
+    }
 }
 
 .container-grid {
@@ -59,10 +68,5 @@ img {
     font-size: 50px;
 }
 
-.first-number {
-    color: red;
-}
 
-.second-number {
-    color: blue;
-}
+
