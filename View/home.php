@@ -13,11 +13,11 @@
             <main>
                 <div class="dice-container">
                     <div class="dice">
-			<img class="img1 paused" id="dice1" src="Photos/dice6.png">
+			<img class="img1 paused" id="dice1" src="Photos/Dice/dice6.png">
                     </div>
 
                     <div class="dice">
-			<img class="img2 paused" id="dice2" src="Photos/dice6.png">
+			<img class="img2 paused" id="dice2" src="Photos/Dice/dice6.png">
                     </div>
                     <div class="rollOutcome">
                         <p id="roll1"></p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
