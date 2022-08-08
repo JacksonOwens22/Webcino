@@ -1,5 +1,6 @@
 'use stric';
 $(document).ready(function() {
+    window.sessionStorage.clear();
     var gameBoard = ["black.png","blue.png","circle.png","drink.png","green.png","red.png"];
     gameBoardSetup(gameBoard);
     $('#rollBtn').click(rollTheDice);
@@ -17,17 +18,22 @@ var gameBoardSetup = function(GB){
                 d = temp[3];
                 e = temp[4];
                 f = temp[5];
-            }           
-        
-        console.log(temp);
-        document.getElementById("sqaure1" + (i+1)).style.backgroundImage="url(Photos/GamePieces/" + GB[a] + ")";
-        document.getElementById("sqaure2" + (i+1)).style.backgroundImage="url(Photos/GamePieces/" + GB[b] + ")";
-        document.getElementById("sqaure3" + (i+1)).style.backgroundImage="url(Photos/GamePieces/" + GB[c] + ")";
-        document.getElementById("sqaure4" + (i+1)).style.backgroundImage="url(Photos/GamePieces/" + GB[d] + ")";
-        document.getElementById("sqaure5" + (i+1)).style.backgroundImage="url(Photos/GamePieces/" + GB[e] + ")";
-        document.getElementById("sqaure6" + (i+1)).style.backgroundImage="url(Photos/GamePieces/" + GB[f] + ")";
+                //Add another for loop to mix the board even more.
+            }
+        let path = "Photos/GamePieces/";
+        let colNuma = path + GB[a];
+        let colNumb = path + GB[b];
+        let colNumc = path + GB[c];
+        let colNumd = path + GB[d];
+        let colNume = path + GB[e];
+        let colNumf = path + GB[f];
+        $('#sqaure1' + (i+1)).attr("src", colNuma);
+        $('#sqaure2' + (i+1)).attr("src", colNumb);
+        $('#sqaure3' + (i+1)).attr("src", colNumc);
+        $('#sqaure4' + (i+1)).attr("src", colNumd);
+        $('#sqaure5' + (i+1)).attr("src", colNume);
+        $('#sqaure6' + (i+1)).attr("src", colNumf);
     }
-
 };
 
 var rollTheDice = function() {
@@ -39,6 +45,7 @@ var rollTheDice = function() {
         var rolledTimer1 = setInterval(showDice1,2200);
         var rolledTimer2 = setInterval(showDice2,4200);
         setInterval(clearTimer, 4200,dice1Timer,dice2Timer,rolledTimer1,rolledTimer2);
+        window.setTimeout(getWinningTile,4300);
 };
 
 function timer1() {
@@ -60,7 +67,7 @@ var showDice1 = function(){
             "Photos/Dice/dice" + randomNumber1 + ".png");
             
         $('#column' + randomNumber1).css("background-color", "yellow");
-        clearTimer();
+        window.sessionStorage.setItem("getColNumber", randomNumber1);
 };      
 var showDice2 = function() {
         var randomNumber2 = Math.floor(Math.random() * 6) + 1;        
@@ -71,7 +78,7 @@ var showDice2 = function() {
             "Photos/Dice/dice" + randomNumber2 + ".png");
         
         $('#row' + randomNumber2).css("background-color", "yellow");
-        clearTimer(); 
+         window.sessionStorage.setItem("getRowNumber", randomNumber2);
 };
 
 var clearTimer = function(a,b,c,d) {
@@ -79,6 +86,13 @@ var clearTimer = function(a,b,c,d) {
   clearInterval(b);
   clearInterval(c);
   clearInterval(d);
+};
+
+var getWinningTile = function(){
+  var colNumber = sessionStorage.getItem("getColNumber");
+  var rowNumber = sessionStorage.getItem("getRowNumber");
+  var winningPath = ($("#sqaure" + colNumber + rowNumber).attr('src'));
+  $("#winningTile").attr("src", winningPath);
 };
         
         
