@@ -3,10 +3,10 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content= "width=device-width, initial-scale=1.0">
-        <link href="CSS/gameScreen.css" rel="stylesheet" type="text/css"/>
+        <link href="CSS/multiplyerScreen.css" rel="stylesheet" type="text/css"/>
         <title>Dice</title>
         <script src="https://code.jquery.com/jquery-latest.min.js"></script>
-        <script src="gameBoardLogic.js"></script>
+        <script src="Javascript/mulitplyerScreenLogic.js"></script>
     </head>
     <body>
         <header></header>

@@ -16,7 +16,7 @@ if (!isset($_SESSION['user_name'])) {
 
 switch ($action) {
     case 'home':
-        include 'View/gameScreen.php';
+        include 'View/bombBored.php';
     break;
 }
 
