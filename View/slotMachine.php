@@ -50,7 +50,6 @@
                 } else if ( winCount > 1 ) {
                     //if your number does not get choosen then you win
                 }
-                
             }
         });
   

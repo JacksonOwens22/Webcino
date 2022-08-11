@@ -16,7 +16,8 @@ if (!isset($_SESSION['user_name'])) {
 
 switch ($action) {
     case 'home':
-        include 'View/slotMachine.php';
+        include 'View/welcomeScreen.php';
+        //include 'View/slotMachine.php';
         //include 'View/multiplyerScreen.php';
     break;
 }

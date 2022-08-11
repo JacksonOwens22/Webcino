@@ -1,0 +1,14 @@
+body, html {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.bgi {
+    background-image: url("../Photos/welcomebackground.png");
+    height: 100%;
+    bakcground-position:center;
+    background-repeat:no-repeat;
+    background-size: cover;
+}
